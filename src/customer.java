@@ -1,12 +1,10 @@
 public class customer {
 
-    // 1. PRIVATE FIELDS (minimum 4)
     private int customerId;
     private String name;
-    private String membershipLevel; // Regular / VIP
+    private String membershipLevel;
     private double totalPurchases;
 
-    // 2. CONSTRUCTOR WITH PARAMETERS
     public customer(int customerId, String name, String membershipLevel, double totalPurchases) {
         this.customerId = customerId;
         this.name = name;
@@ -14,7 +12,6 @@ public class customer {
         this.totalPurchases = totalPurchases;
     }
 
-    // 3. DEFAULT CONSTRUCTOR (optional but recommended)
     public customer() {
         this.customerId = 0;
         this.name = "Unknown Customer";
@@ -22,7 +19,6 @@ public class customer {
         this.totalPurchases = 0.0;
     }
 
-    // 4. GETTERS
     public int getCustomerId() {
         return customerId;
     }
@@ -39,7 +35,6 @@ public class customer {
         return totalPurchases;
     }
 
-    // 5. SETTERS
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
@@ -56,21 +51,17 @@ public class customer {
         this.totalPurchases = totalPurchases;
     }
 
-    // 6. ADDITIONAL METHODS WITH LOGIC (minimum 2)
-
-    // Method 1: Add purchase amount
     public void addPurchase(double amount) {
         if (amount > 0) {
             totalPurchases += amount;
         }
     }
 
-    // Method 2: Check if customer is VIP
     public boolean isVIP() {
         return totalPurchases >= 100000;
     }
 
-    // 7. toString() METHOD
+    @Override
     public String toString() {
         return "Customer{" +
                 "customerId=" + customerId +
@@ -80,3 +71,4 @@ public class customer {
                 '}';
     }
 }
+
