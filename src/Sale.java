@@ -60,7 +60,6 @@ public class Sale {
     public double calculateTotal() {
         return totalAmount;
     }
-
     public String toString() {
         return "Sale{" +
                 "saleId=" + saleId +

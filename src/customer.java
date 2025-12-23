@@ -60,7 +60,6 @@ public class customer {
     public boolean isVIP() {
         return totalPurchases >= 100000;
     }
-
     public String toString() {
         return "Customer{" +
                 "customerId=" + customerId +

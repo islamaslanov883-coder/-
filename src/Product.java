@@ -60,7 +60,6 @@ public class Product {
             stockQuantity += amount;
         }
     }
-
     public String toString() {
         return "Product{" +
                 "productId=" + productId +
