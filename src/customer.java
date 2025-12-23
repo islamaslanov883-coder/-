@@ -61,7 +61,6 @@ public class customer {
         return totalPurchases >= 100000;
     }
 
-    @Override
     public String toString() {
         return "Customer{" +
                 "customerId=" + customerId +
