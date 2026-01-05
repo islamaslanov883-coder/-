@@ -6,10 +6,10 @@ public class Sale {
     private String date;
 
     public Sale(int saleId, String customerName, double totalAmount, String date) {
-        this.saleId = saleId;
-        this.customerName = customerName;
-        this.totalAmount = totalAmount;
-        this.date = date;
+        setSaleId(saleId);
+        setCustomerName(customerName);
+        setTotalAmount(totalAmount);
+        setDate(date);
     }
 
     public Sale() {
@@ -19,47 +19,19 @@ public class Sale {
         this.date = "Not set";
     }
 
-    public int getSaleId() {
-        return saleId;
-    }
+    public int getSaleId() { return saleId; }
+    public String getCustomerName() { return customerName; }
+    public double getTotalAmount() { return totalAmount; }
+    public String getDate() { return date; }
 
-    public String getCustomerName() {
-        return customerName;
-    }
+    public void setSaleId(int saleId) { if (saleId > 0) this.saleId = saleId; }
+    public void setCustomerName(String customerName) { this.customerName = customerName; }
+    public void setTotalAmount(double totalAmount) { if (totalAmount >= 0) this.totalAmount = totalAmount; }
+    public void setDate(String date) { this.date = date; }
 
-    public double getTotalAmount() {
-        return totalAmount;
-    }
+    public void addItem(double price) { if (price > 0) totalAmount += price; }
+    public double calculateTotal() { return totalAmount; }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setSaleId(int saleId) {
-        this.saleId = saleId;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public void addItem(double price) {
-        if (price > 0) {
-            totalAmount += price;
-        }
-    }
-
-    public double calculateTotal() {
-        return totalAmount;
-    }
     public String toString() {
         return "Sale{" +
                 "saleId=" + saleId +
@@ -69,5 +41,6 @@ public class Sale {
                 '}';
     }
 }
+
 
 
