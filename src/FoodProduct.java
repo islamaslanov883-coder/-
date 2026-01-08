@@ -1,5 +1,4 @@
 public class FoodProduct extends Product {
-
     private String expirationDate;
 
     public FoodProduct(int productId, String name, double price, int stockQuantity, String expirationDate) {
@@ -10,6 +9,7 @@ public class FoodProduct extends Product {
     public String getExpirationDate() { return expirationDate; }
     public void setExpirationDate(String expirationDate) { this.expirationDate = expirationDate; }
 
+    @Override
     public String getDescription() {
         return "Food product: " + name + ", expires on " + expirationDate;
     }

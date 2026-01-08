@@ -1,9 +1,9 @@
 public class Product {
-
     protected int productId;
     protected String name;
     protected double price;
     protected int stockQuantity;
+
     public Product(int productId, String name, double price, int stockQuantity) {
         setProductId(productId);
         setName(name);
@@ -22,6 +22,7 @@ public class Product {
     public String getName() { return name; }
     public double getPrice() { return price; }
     public int getStockQuantity() { return stockQuantity; }
+
     public void setProductId(int productId) { if (productId > 0) this.productId = productId; }
     public void setName(String name) { if (name != null && !name.isEmpty()) this.name = name; }
     public void setPrice(double price) { if (price >= 0) this.price = price; }
@@ -31,6 +32,7 @@ public class Product {
         return "Generic product: " + name;
     }
 
+    @Override
     public String toString() {
         return "Product{" +
                 "productId=" + productId +

@@ -1,5 +1,4 @@
 public class Sale {
-
     private int saleId;
     private String customerName;
     private double totalAmount;
@@ -32,6 +31,7 @@ public class Sale {
     public void addItem(double price) { if (price > 0) totalAmount += price; }
     public double calculateTotal() { return totalAmount; }
 
+    @Override
     public String toString() {
         return "Sale{" +
                 "saleId=" + saleId +
@@ -41,6 +41,3 @@ public class Sale {
                 '}';
     }
 }
-
-
-
