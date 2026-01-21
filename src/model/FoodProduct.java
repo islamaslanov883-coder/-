@@ -8,8 +8,10 @@ public class FoodProduct extends Product {
         this.expirationDate = expirationDate;
     }
 
+    public String getExpirationDate() { return expirationDate; }
+
     @Override
     public String getDescription() {
-        return "Food: " + name + " ($" + price + "), Expiration: " + expirationDate;
+        return "[Food] " + name + " | Best before: " + expirationDate;
     }
 }
