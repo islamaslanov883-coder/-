@@ -1,6 +1,7 @@
 package model;
 
 public abstract class Product {
+
     protected int id;
     protected String name;
     protected double price;
@@ -11,12 +12,10 @@ public abstract class Product {
         this.price = price;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
     public abstract String getDescription();
 
     @Override
     public String toString() {
-        return "ID: " + id + " | " + name + " ($" + price + ")";
+        return id + ". " + name + " - $" + price;
     }
 }

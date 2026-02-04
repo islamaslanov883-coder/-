@@ -1,6 +1,7 @@
 package model;
 
 public class FoodProduct extends Product {
+
     private String expirationDate;
 
     public FoodProduct(int id, String name, double price, String expirationDate) {
@@ -8,10 +9,14 @@ public class FoodProduct extends Product {
         this.expirationDate = expirationDate;
     }
 
-    public String getExpirationDate() { return expirationDate; }
+    public String getExpirationDate() {
+        return expirationDate;
+    }
 
     @Override
     public String getDescription() {
-        return "[Food] " + name + " | Best before: " + expirationDate;
+        return "Food product: " + name +
+                ", price $" + price +
+                ", expires on " + expirationDate;
     }
 }
