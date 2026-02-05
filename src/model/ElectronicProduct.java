@@ -11,3 +11,4 @@ public class ElectronicProduct extends Product {
         return "Electronic product: " + name + ", price $" + price;
     }
 }
+
