@@ -1,9 +1,9 @@
 import menu.Menu;
-import menu.StoreMenu;
+import menu.GroceryMenu;
 
 public class Main {
     public static void main(String[] args) {
-        Menu menu = new StoreMenu();
-        menu.run();
+        Menu storeMenu = new GroceryMenu();
+        storeMenu.run();
     }
 }
